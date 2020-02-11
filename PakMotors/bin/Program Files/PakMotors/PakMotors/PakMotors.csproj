@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D90DE0E-2047-457C-8850-25429A9DFC41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PakMotors</RootNamespace>
+    <AssemblyName>PakMotors</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>D:\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>D:\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>D:\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>D:\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="DPCtlUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPCtlXUru, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlXUru.dll</HintPath>
+    </Reference>
+    <Reference Include="DPUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPXUru, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPXUru.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>D:\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buyers.Designer.cs">
+      <DependentUpon>Buyers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars.Designer.cs">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarSales.Designer.cs">
+      <DependentUpon>CarSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\CustomImagePane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="container\MaterialTextField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CreateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCar.Designer.cs">
+      <DependentUpon>CreateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\BuyerEnrollmentButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\BuyerEnrollmentButton.Designer.cs">
+      <DependentUpon>BuyerEnrollmentButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CameraDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CameraDialog.Designer.cs">
+      <DependentUpon>CameraDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CreateBuyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateBuyers.Designer.cs">
+      <DependentUpon>CreateBuyers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CreateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateCar.Designer.cs">
+      <DependentUpon>CreateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CreateSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateSeller.Designer.cs">
+      <DependentUpon>CreateSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ImageConfirmationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\ImageConfirmationDialog.Designer.cs">
+      <DependentUpon>ImageConfirmationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\ShowImage.Designer.cs">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Buyer.cs" />
+    <Compile Include="model\Car.cs" />
+    <Compile Include="model\Person.cs" />
+    <Compile Include="model\Seller.cs" />
+    <Compile Include="model\Witness.cs" />
+    <Compile Include="PakMotorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellCarFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellCarFrom.Designer.cs">
+      <DependentUpon>SellCarFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sellers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sellers.Designer.cs">
+      <DependentUpon>Sellers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\DigitalPersonaUtil.cs" />
+    <Compile Include="utils\DBManager.cs" />
+    <Compile Include="utils\ImageHandling.cs" />
+    <Compile Include="utils\WebCam.cs" />
+    <EmbeddedResource Include="Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buyers.resx">
+      <DependentUpon>Buyers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars.resx">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarSales.resx">
+      <DependentUpon>CarSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\BuyerEnrollmentButton.resx">
+      <DependentUpon>BuyerEnrollmentButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CameraDialog.resx">
+      <DependentUpon>CameraDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateBuyers.resx">
+      <DependentUpon>CreateBuyers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateCar.resx">
+      <DependentUpon>CreateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateSeller.resx">
+      <DependentUpon>CreateSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ImageConfirmationDialog.resx">
+      <DependentUpon>ImageConfirmationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ShowImage.resx">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SellCarFrom.resx">
+      <DependentUpon>SellCarFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sellers.resx">
+      <DependentUpon>Sellers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PakMotorsDataSet.xsc">
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PakMotorsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PakMotorsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PakMotorsDataSet.xss">
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_white_18dp1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17D99BC2-CDBC-489C-9A50-86CFAF878B5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PakMotors</RootNamespace>
+    <AssemblyName>PakMotors</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>transferletter_logo_C3W_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>E:\Program Files\PakMotors\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>E:\Program Files\PakMotors\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>E:\Program Files\PakMotors\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>E:\Program Files\PakMotors\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DPCtlUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPCtlXUru, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlXUru.dll</HintPath>
+    </Reference>
+    <Reference Include="DPUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPXUru, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPXUru.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\GeneralSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\GeneralSearch.Designer.cs">
+      <DependentUpon>GeneralSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewCashSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewCashSaleForm.Designer.cs">
+      <DependentUpon>NewCashSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewCreditSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewCreditSaleForm.Designer.cs">
+      <DependentUpon>NewCreditSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OldAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OldAccounts.Designer.cs">
+      <DependentUpon>OldAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectPersons.Designer.cs">
+      <DependentUpon>SelectPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PakMotorsDataSet.cs">
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\cr_accounts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_accounts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_bank_quotation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_bank_quotation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_carTransactions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_carTransactions.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_patty_cash_book.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_patty_cash_book.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_sales_receipt_blank.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_sales_receipt_blank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_sale_receipt_eng_Blanks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_sale_receipt_eng_Blanks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\CashSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\CashSales.Designer.cs">
+      <DependentUpon>CashSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CreditSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\CreditSales.Designer.cs">
+      <DependentUpon>CreditSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccountReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccountReportView.Designer.cs">
+      <DependentUpon>AccountReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashSales.Designer.cs">
+      <DependentUpon>CashSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OldPattyCashBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OldPattyCashBooks.Designer.cs">
+      <DependentUpon>OldPattyCashBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PattyCashBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PattyCashBook.Designer.cs">
+      <DependentUpon>PattyCashBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PattyCashReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PattyCashReport.Designer.cs">
+      <DependentUpon>PattyCashReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Persons.Designer.cs">
+      <DependentUpon>Persons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cars.Designer.cs">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CustomImagePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\carsDataset.cs">
+      <DependentUpon>carsDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\carsDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carsDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PakMotorsDatabaseDataSet.Designer.cs">
+      <DependentUpon>PakMotorsDatabaseDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Dialogs\CashSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CashSaleForm.Designer.cs">
+      <DependentUpon>CashSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreditSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreditSaleForm.Designer.cs">
+      <DependentUpon>CreditSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EnrollmentDialogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EnrollmentDialogs.designer.cs">
+      <DependentUpon>EnrollmentDialogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CameraDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CameraDialog.designer.cs">
+      <DependentUpon>CameraDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateAccount.designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreatePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreatePerson.designer.cs">
+      <DependentUpon>CreatePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateCar.designer.cs">
+      <DependentUpon>CreateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImageConfirmationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImageConfirmationDialog.designer.cs">
+      <DependentUpon>ImageConfirmationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OldAccountDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OldAccountDetails.Designer.cs">
+      <DependentUpon>OldAccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShowImage.designer.cs">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="PakMotorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\cr_bayana_receipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_bayana_receipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_bayana_receipt_eng.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_bayana_receipt_eng.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_delivery_order.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_delivery_order.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_IqraarNama.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_IqraarNama.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_sales_receipt1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_sales_receipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_sale_receipt_eng.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_sale_receipt_eng.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\CR_Transactions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Transactions.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\cr_transfer_letter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_transfer_letter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView.Designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DBManager.cs" />
+    <Compile Include="Utils\DigitalPersonaUtil.cs" />
+    <Compile Include="Utils\ImageHandling.cs" />
+    <Compile Include="Views\PinCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PinCode.Designer.cs">
+      <DependentUpon>PinCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecycleCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RecycleCars.Designer.cs">
+      <DependentUpon>RecycleCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecyclePersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RecyclePersons.Designer.cs">
+      <DependentUpon>RecyclePersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TestConnection.Designer.cs">
+      <DependentUpon>TestConnection.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialogs\GeneralSearch.resx">
+      <DependentUpon>GeneralSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewCashSaleForm.resx">
+      <DependentUpon>NewCashSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewCreditSaleform.resx">
+      <DependentUpon>NewCreditSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OldAccounts.resx">
+      <DependentUpon>OldAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPersons.resx">
+      <DependentUpon>SelectPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_accounts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_accounts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_bank_quotation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_bank_quotation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_carTransactions.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_carTransactions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_patty_cash_book.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_patty_cash_book.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_sales_receipt_blank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_sales_receipt_blank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_sale_receipt_eng_Blanks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_sale_receipt_eng_Blanks.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\CashSales.resx">
+      <DependentUpon>CashSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\CreditSales.resx">
+      <DependentUpon>CreditSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccountReportView.resx">
+      <DependentUpon>AccountReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashSales.resx">
+      <DependentUpon>CashSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OldPattyCashBooks.resx">
+      <DependentUpon>OldPattyCashBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PattyCashBook.resx">
+      <DependentUpon>PattyCashBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PattyCashReport.resx">
+      <DependentUpon>PattyCashReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Persons.resx">
+      <DependentUpon>Persons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cars.resx">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CashSaleForm.resx">
+      <DependentUpon>CashSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreditSaleForm.resx">
+      <DependentUpon>CreditSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EnrollmentDialogs.resx">
+      <DependentUpon>EnrollmentDialogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CameraDialog.resx">
+      <DependentUpon>CameraDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreatePerson.resx">
+      <DependentUpon>CreatePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateCar.resx">
+      <DependentUpon>CreateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImageConfirmationDialog.resx">
+      <DependentUpon>ImageConfirmationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OldAccountDetails.resx">
+      <DependentUpon>OldAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShowImage.resx">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporting\cr_bayana_receipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_bayana_receipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_bayana_receipt_eng.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_bayana_receipt_eng.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_delivery_order.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_delivery_order.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_IqraarNama.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_IqraarNama.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_sales_receipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_sales_receipt1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_sale_receipt_eng.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_sale_receipt_eng.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\CR_Transactions.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Transactions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_transfer_letter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_transfer_letter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinCode.resx">
+      <DependentUpon>PinCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RecycleCars.resx">
+      <DependentUpon>RecycleCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RecyclePersons.resx">
+      <DependentUpon>RecyclePersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TestConnection.resx">
+      <DependentUpon>TestConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dataset\carsDataset.xsc">
+      <DependentUpon>carsDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\carsDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carsDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\carsDataset.xss">
+      <DependentUpon>carsDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PakMotorsDatabaseDataSet.xsc">
+      <DependentUpon>PakMotorsDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PakMotorsDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PakMotorsDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\PakMotorsDatabaseDataSet.xss">
+      <DependentUpon>PakMotorsDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PakMotorsDataSet.xsc">
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PakMotorsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PakMotorsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PakMotorsDataSet.xss">
+      <DependentUpon>PakMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dataset\bayanaPic.png" />
+    <Content Include="Dataset\iqraarnama_pic.png" />
+    <Content Include="Dataset\Pak Motors.PNG" />
+    <Content Include="Dataset\pakmotors_Logo.jpg" />
+    <Content Include="Dataset\pakmotors_transfer.jpg" />
+    <Content Include="PakMotorsDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PakMotorsDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PakMotorsDatabase.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\baseline_add_white_18dp1.png" />
+    <None Include="Resources\outline_search_black_18dp.png" />
+    <None Include="Resources\outline_search_black_18dp1.png" />
+    <None Include="Resources\outline_clear_black_18dp.png" />
+    <None Include="Resources\outline_remove_red_eye_black_18dp.png" />
+    <None Include="Resources\outline_add_black_18dp.png" />
+    <None Include="Resources\outline_add_black_18dp1.png" />
+    <None Include="Resources\outline_save_black_18dp.png" />
+    <None Include="Resources\outline_clear_black_18dp1.png" />
+    <None Include="Resources\outline_remove_white_18dp.png" />
+    <Content Include="transferletter_logo_C3W_icon.ico" />
+    <None Include="Resources\baseline_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

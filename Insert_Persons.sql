@@ -1,0 +1,2 @@
+﻿INSERT INTO Persons(Name, FatherName, Cast, CNIC, Phone1, Phone2, Address) VALUES
+	('Muhammad Arish Sultan Khan', 'Tahir Sultan Khan', 'Khan', '36302-0993785-7', '0300-6309211', '0345-3915553', 'Somewhere')
