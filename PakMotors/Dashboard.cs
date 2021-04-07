@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace PakMotors
 {
-
+    // DESKTOP-HCB17EO
     public partial class Dashboard : Form
     {
         private int pattycashId = 0;
@@ -16,6 +16,14 @@ namespace PakMotors
         public Dashboard()
         {
             InitializeComponent();
+
+            DateTime limit = new DateTime(2021, 5, 6);
+            TimeSpan timeSpan = limit.Subtract(DateTime.Now);
+            if (timeSpan.Days <= 0)
+            {
+                MessageBox.Show("30 Day usage limit is over, you can\'t use this software now", "Error", MessageBoxButtons.OK);
+                System.Environment.Exit(0);
+            }
 
             this.button5.PerformClick();
             this.WindowState = FormWindowState.Maximized;
