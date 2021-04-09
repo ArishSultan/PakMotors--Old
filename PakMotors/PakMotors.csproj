@@ -101,6 +101,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dataset\general_search_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>general_search_dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\GeneralSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +157,12 @@
       <DependentUpon>cr_carTransactions.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reporting\cr_general_search_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_general_search_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reporting\cr_patty_cash_book.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +210,12 @@
     </Compile>
     <Compile Include="Views\CashSales.Designer.cs">
       <DependentUpon>CashSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeneralSearchReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GeneralSearchReportView.Designer.cs">
+      <DependentUpon>GeneralSearchReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\OldPattyCashBooks.cs">
       <SubType>Form</SubType>
@@ -435,6 +452,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cr_carTransactions.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\cr_general_search_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_general_search_report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporting\cr_patty_cash_book.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cr_patty_cash_book.cs</LastGenOutput>
@@ -461,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CashSales.resx">
       <DependentUpon>CashSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GeneralSearchReportView.resx">
+      <DependentUpon>GeneralSearchReportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OldPattyCashBooks.resx">
       <DependentUpon>OldPattyCashBooks.cs</DependentUpon>
@@ -580,6 +604,17 @@
     </None>
     <None Include="Dataset\carsDataset.xss">
       <DependentUpon>carsDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\general_search_dataset.xsc">
+      <DependentUpon>general_search_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\general_search_dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>general_search_dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\general_search_dataset.xss">
+      <DependentUpon>general_search_dataset.xsd</DependentUpon>
     </None>
     <None Include="Dataset\PakMotorsDatabaseDataSet.xsc">
       <DependentUpon>PakMotorsDatabaseDataSet.xsd</DependentUpon>

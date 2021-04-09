@@ -27,7 +27,7 @@ namespace PakMotors.Utils
             //"Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;"
 
             //Connection = new SqlConnection(@"Data Source=ARISH-PC\MSSQLSERVER;Initial Catalog=PakMotors;Integrated Security=True");
-            Connection = new SqlConnection(@"Data Source=DESKTOP-HCB17EO;Initial Catalog=PakMotors;Integrated Security=True");
+            Connection = new SqlConnection(@"Data Source=ZAIN-PC\SQLEXPRESS01;Initial Catalog=PakMotors;Integrated Security=True");
         }
 
         public static int Insert(string tableName, string[] columns, SqlDbType[] types, object[] values)
