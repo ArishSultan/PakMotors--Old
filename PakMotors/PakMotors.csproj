@@ -623,6 +623,7 @@
     <Content Include="Dataset\Pak Motors.PNG" />
     <Content Include="Dataset\pakmotors_Logo.jpg" />
     <Content Include="Dataset\pakmotors_transfer.jpg" />
+    <Content Include="logo.png" />
     <Content Include="PakMotorsDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
