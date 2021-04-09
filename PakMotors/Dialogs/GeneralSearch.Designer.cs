@@ -29,27 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pakMotorsDataSet = new PakMotors.PakMotorsDataSet();
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesTableAdapter = new PakMotors.PakMotorsDataSetTableAdapters.SalesTableAdapter();
             this.tableAdapterManager = new PakMotors.PakMotorsDataSetTableAdapters.TableAdapterManager();
             this.panel6 = new System.Windows.Forms.Panel();
             this.salesDataGridView = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.IdentifyLabel = new System.Windows.Forms.Label();
-            this.Identify = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.searchBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +89,21 @@
             this.invoiceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.srDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.IdentifyLabel = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Identify = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnGeneralReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pakMotorsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.panel6.SuspendLayout();
@@ -144,8 +147,9 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(915, 437);
+            this.panel6.Size = new System.Drawing.Size(1364, 612);
             this.panel6.TabIndex = 14;
             // 
             // salesDataGridView
@@ -206,141 +210,14 @@
             this.srDataGridViewTextBoxColumn});
             this.salesDataGridView.DataSource = this.salesBindingSource;
             this.salesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.salesDataGridView.Location = new System.Drawing.Point(0, 28);
-            this.salesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.salesDataGridView.Location = new System.Drawing.Point(0, 34);
+            this.salesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.salesDataGridView.Name = "salesDataGridView";
             this.salesDataGridView.RowHeadersWidth = 51;
             this.salesDataGridView.RowTemplate.Height = 24;
-            this.salesDataGridView.Size = new System.Drawing.Size(915, 409);
+            this.salesDataGridView.Size = new System.Drawing.Size(1364, 578);
             this.salesDataGridView.TabIndex = 9;
             this.salesDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SalesDataGridView_RowHeaderMouseDoubleClick_1);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.IdentifyLabel);
-            this.panel7.Controls.Add(this.Identify);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(915, 28);
-            this.panel7.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(146, 6);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "label4";
-            this.label4.Visible = false;
-            // 
-            // IdentifyLabel
-            // 
-            this.IdentifyLabel.Location = new System.Drawing.Point(92, 7);
-            this.IdentifyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.IdentifyLabel.Name = "IdentifyLabel";
-            this.IdentifyLabel.Size = new System.Drawing.Size(204, 19);
-            this.IdentifyLabel.TabIndex = 14;
-            this.IdentifyLabel.TextChanged += new System.EventHandler(this.IdentifyLabel_TextChanged);
-            // 
-            // Identify
-            // 
-            this.Identify.Location = new System.Drawing.Point(0, 0);
-            this.Identify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Identify.Name = "Identify";
-            this.Identify.Size = new System.Drawing.Size(81, 28);
-            this.Identify.TabIndex = 13;
-            this.Identify.Text = "Identify";
-            this.Identify.UseVisualStyleBackColor = true;
-            this.Identify.Click += new System.EventHandler(this.Identify_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.dateTimePicker1);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Controls.Add(this.comboBox2);
-            this.panel8.Controls.Add(this.searchBox);
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.label5);
-            this.panel8.Controls.Add(this.comboBox1);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(312, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(603, 28);
-            this.panel8.TabIndex = 11;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(428, 5);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(175, 20);
-            this.dateTimePicker1.TabIndex = 13;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Search For";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Car",
-            "Buyer",
-            "Seller"});
-            this.comboBox2.Location = new System.Drawing.Point(70, 1);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.searchBox.Location = new System.Drawing.Point(428, 2);
-            this.searchBox.Multiline = true;
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(176, 27);
-            this.searchBox.TabIndex = 7;
-            this.searchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(198, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Search By";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(382, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Search";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(259, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -362,9 +239,9 @@
             // SaleDate
             // 
             this.SaleDate.DataPropertyName = "SaleDate";
-            dataGridViewCellStyle1.Format = "D";
-            dataGridViewCellStyle1.NullValue = null;
-            this.SaleDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "D";
+            dataGridViewCellStyle4.NullValue = null;
+            this.SaleDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.SaleDate.HeaderText = "SaleDate";
             this.SaleDate.MinimumWidth = 6;
             this.SaleDate.Name = "SaleDate";
@@ -716,9 +593,9 @@
             // invoiceDateDataGridViewTextBoxColumn
             // 
             this.invoiceDateDataGridViewTextBoxColumn.DataPropertyName = "InvoiceDate";
-            dataGridViewCellStyle2.Format = "D";
-            dataGridViewCellStyle2.NullValue = null;
-            this.invoiceDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Format = "D";
+            dataGridViewCellStyle5.NullValue = null;
+            this.invoiceDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.invoiceDateDataGridViewTextBoxColumn.HeaderText = "InvoiceDate";
             this.invoiceDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.invoiceDateDataGridViewTextBoxColumn.Name = "invoiceDateDataGridViewTextBoxColumn";
@@ -735,9 +612,9 @@
             // recievedDateDataGridViewTextBoxColumn
             // 
             this.recievedDateDataGridViewTextBoxColumn.DataPropertyName = "RecievedDate";
-            dataGridViewCellStyle3.Format = "D";
-            dataGridViewCellStyle3.NullValue = null;
-            this.recievedDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Format = "D";
+            dataGridViewCellStyle6.NullValue = null;
+            this.recievedDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.recievedDateDataGridViewTextBoxColumn.HeaderText = "RecievedDate";
             this.recievedDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.recievedDateDataGridViewTextBoxColumn.Name = "recievedDateDataGridViewTextBoxColumn";
@@ -768,21 +645,188 @@
             this.srDataGridViewTextBoxColumn.Name = "srDataGridViewTextBoxColumn";
             this.srDataGridViewTextBoxColumn.Width = 125;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.IdentifyLabel);
+            this.panel7.Controls.Add(this.comboBox2);
+            this.panel7.Controls.Add(this.Identify);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1364, 34);
+            this.panel7.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(195, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "label4";
+            this.label4.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(303, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Search For";
+            // 
+            // IdentifyLabel
+            // 
+            this.IdentifyLabel.Location = new System.Drawing.Point(109, 5);
+            this.IdentifyLabel.Name = "IdentifyLabel";
+            this.IdentifyLabel.Size = new System.Drawing.Size(193, 23);
+            this.IdentifyLabel.TabIndex = 14;
+            this.IdentifyLabel.TextChanged += new System.EventHandler(this.IdentifyLabel_TextChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Car",
+            "Buyer",
+            "Seller"});
+            this.comboBox2.Location = new System.Drawing.Point(389, 6);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(160, 24);
+            this.comboBox2.TabIndex = 11;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
+            // 
+            // Identify
+            // 
+            this.Identify.Location = new System.Drawing.Point(0, 0);
+            this.Identify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Identify.Name = "Identify";
+            this.Identify.Size = new System.Drawing.Size(108, 34);
+            this.Identify.TabIndex = 13;
+            this.Identify.Text = "Identify";
+            this.Identify.UseVisualStyleBackColor = true;
+            this.Identify.Click += new System.EventHandler(this.Identify_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnGeneralReport);
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Controls.Add(this.dateTimePicker2);
+            this.panel8.Controls.Add(this.dateTimePicker1);
+            this.panel8.Controls.Add(this.searchBox);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.comboBox1);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(532, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(832, 34);
+            this.panel8.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(510, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 25);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "-";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(526, 5);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(166, 22);
+            this.dateTimePicker2.TabIndex = 15;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(334, 7);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(175, 22);
+            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+            // 
+            // searchBox
+            // 
+            this.searchBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.searchBox.Location = new System.Drawing.Point(334, 2);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBox.Multiline = true;
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(358, 32);
+            this.searchBox.TabIndex = 7;
+            this.searchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Search By";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(274, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Search";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(106, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            // 
+            // btnGeneralReport
+            // 
+            this.btnGeneralReport.Location = new System.Drawing.Point(700, 5);
+            this.btnGeneralReport.Name = "btnGeneralReport";
+            this.btnGeneralReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGeneralReport.TabIndex = 17;
+            this.btnGeneralReport.Text = "Report";
+            this.btnGeneralReport.UseVisualStyleBackColor = true;
+            this.btnGeneralReport.Click += new System.EventHandler(this.btnGeneralReport_Click);
+            // 
             // GeneralSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 437);
+            this.ClientSize = new System.Drawing.Size(1364, 612);
             this.Controls.Add(this.panel6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GeneralSearch";
             this.Text = "GeneralSearch";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GeneralSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pakMotorsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -861,5 +905,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn saleDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn srDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnGeneralReport;
     }
 }

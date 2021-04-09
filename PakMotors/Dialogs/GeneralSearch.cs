@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using PakMotors.Reporting;
+using PakMotors.Views;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PakMotors.Dialogs
 {
     public partial class GeneralSearch : Form
     {
+        DataTable dataTable;
         public GeneralSearch()
         {
             InitializeComponent();
@@ -22,11 +19,11 @@ namespace PakMotors.Dialogs
             comboBox2.SelectedIndex = 0;
             this.WindowState = FormWindowState.Maximized;
 
-            DataTable table = new DataTable();
+            dataTable = new DataTable();
 
-            Utils.DBManager.QueryAdapter("SELECT * FROM Sales").Fill(table);
+            Utils.DBManager.QueryAdapter("SELECT * FROM Sales").Fill(dataTable);
 
-            this.salesDataGridView.DataSource = table;
+            this.salesDataGridView.DataSource = dataTable;
         }
 
         private void Identify_Click(object sender, EventArgs e)
@@ -52,23 +49,34 @@ namespace PakMotors.Dialogs
 
         private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            var date = dateTimePicker1.Value;
+            onDateChanged();
+        }
 
-            string query = $"SELECT * FROM Sales WHERE SaleDate = '{date.Year}/{date.Month}/{date.Day}'";
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            onDateChanged();
+        }
+
+        private void onDateChanged()
+        {
+            var date = dateTimePicker1.Value;
+            var endDate = dateTimePicker2.Value;
+
+            string query = $"SELECT * FROM Sales WHERE SaleDate >= '{date.Year}/{date.Month}/{date.Day}' and SaleDate <= '{endDate.Year}/{endDate.Month}/{endDate.Day}'";
 
             var dataAdapter = Utils.DBManager.QueryAdapter(query);
-            var table = new DataTable();
+            dataTable = new DataTable();
 
-            dataAdapter.Fill(table);
+            dataAdapter.Fill(dataTable);
 
-            this.salesDataGridView.DataSource = table;
+            this.salesDataGridView.DataSource = dataTable;
         }
 
         private void IdentifyLabel_TextChanged(object sender, EventArgs e)
         {
             if (IdentifyLabel.Text == "Person is Found")
             {
-                var dataTable = new DataTable();
+                dataTable = new DataTable();
 
                 int id = int.Parse(label4.Text);
                 Utils.DBManager.QueryAdapter($"SELECT * FROM sales WHERE i1 = {id} OR i2 = {id} OR i3 = {id} OR i4 = {id}").Fill(dataTable);
@@ -104,7 +112,7 @@ namespace PakMotors.Dialogs
         {
             if (searchBox.Text == "")
             {
-                var dataTable = new DataTable();
+                dataTable = new DataTable();
 
                 Utils.DBManager.QueryAdapter("SELECT * FROM Sales").Fill(dataTable);
                 salesDataGridView.DataSource = dataTable;
@@ -124,11 +132,11 @@ namespace PakMotors.Dialogs
                         query = $"SELECT * FROM Sales WHERE \"{comboBox2.SelectedItem.ToString()}'s {item}\" Like '%" + searchBox.Text + "%'";
 
                     var dataAdapter = Utils.DBManager.QueryAdapter(query);
-                    var table = new DataTable();
+                    dataTable = new DataTable();
 
-                    dataAdapter.Fill(table);
+                    dataAdapter.Fill(dataTable);
 
-                    this.salesDataGridView.DataSource = table;
+                    this.salesDataGridView.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {
@@ -144,14 +152,18 @@ namespace PakMotors.Dialogs
             {
                 searchBox.Visible = false;
                 dateTimePicker1.Visible = true;
+                dateTimePicker2.Visible = true;
+                label1.Visible = true;
             }
             else
             {
                 searchBox.Text = "";
                 searchBox.Visible = true;
                 dateTimePicker1.Visible = false;
+                dateTimePicker2.Visible = false;
+                label1.Visible = false;
 
-                var dataTable = new DataTable();
+                dataTable = new DataTable();
 
                 Utils.DBManager.QueryAdapter("SELECT * FROM Sales").Fill(dataTable);
                 salesDataGridView.DataSource = dataTable;
@@ -174,6 +186,17 @@ namespace PakMotors.Dialogs
                 new Dialogs.NewCashSaleForm((int)salesDataGridView.SelectedRows[0].Cells[0].Value).ShowDialog();
                 this.salesTableAdapter.Fill(this.pakMotorsDataSet.Sales);
             }
+        }
+
+        private void btnGeneralReport_Click(object sender, EventArgs e)
+        {
+            cr_general_search_report gv = new cr_general_search_report();
+            gv.SetDataSource(dataTable);
+
+            GeneralSearchReportView rptView = new GeneralSearchReportView();
+            rptView.generalSearchReportViewer.ReportSource = gv;
+
+            rptView.ShowDialog();
         }
     }
 }

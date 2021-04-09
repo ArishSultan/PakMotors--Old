@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="general_search_dataset" targetNamespace="http://tempuri.org/general_search_dataset.xsd" xmlns:mstns="http://tempuri.org/general_search_dataset.xsd" xmlns="http://tempuri.org/general_search_dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="general_search_dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="general_search_dataset" msprop:Generator_UserDSName="general_search_dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GeneralSearchDataTable" msprop:Generator_TableClassName="GeneralSearchDataTableDataTable" msprop:Generator_TableVarName="tableGeneralSearchDataTable" msprop:Generator_TablePropName="GeneralSearchDataTable" msprop:Generator_RowDeletingName="GeneralSearchDataTableRowDeleting" msprop:Generator_RowChangingName="GeneralSearchDataTableRowChanging" msprop:Generator_RowEvHandlerName="GeneralSearchDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="GeneralSearchDataTableRowDeleted" msprop:Generator_UserTableName="GeneralSearchDataTable" msprop:Generator_RowChangedName="GeneralSearchDataTableRowChanged" msprop:Generator_RowEvArgName="GeneralSearchDataTableRowChangeEvent" msprop:Generator_RowClassName="GeneralSearchDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_UserColumnName="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="SaleDate" msprop:Generator_ColumnVarNameInTable="columnSaleDate" msprop:Generator_ColumnPropNameInRow="SaleDate" msprop:Generator_ColumnPropNameInTable="SaleDateColumn" msprop:Generator_UserColumnName="SaleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HorsePower" msprop:Generator_ColumnVarNameInTable="columnHorsePower" msprop:Generator_ColumnPropNameInRow="HorsePower" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="HorsePowerColumn" msprop:Generator_UserColumnName="HorsePower" type="xs:string" minOccurs="0" />
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" type="xs:string" minOccurs="0" />
+              <xs:element name="EngineNo" msprop:Generator_ColumnVarNameInTable="columnEngineNo" msprop:Generator_ColumnPropNameInRow="EngineNo" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="EngineNoColumn" msprop:Generator_UserColumnName="EngineNo" type="xs:string" minOccurs="0" />
+              <xs:element name="ChassisNo" msprop:Generator_ColumnVarNameInTable="columnChassisNo" msprop:Generator_ColumnPropNameInRow="ChassisNo" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="ChassisNoColumn" msprop:Generator_UserColumnName="ChassisNo" type="xs:string" minOccurs="0" />
+              <xs:element name="RegistrationNo" msprop:Generator_ColumnVarNameInTable="columnRegistrationNo" msprop:Generator_ColumnPropNameInRow="RegistrationNo" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="RegistrationNoColumn" msprop:Generator_UserColumnName="RegistrationNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Buyer_x0027_s_x0020_Name" msprop:Generator_ColumnVarNameInTable="_columnBuyer_s_Name" msprop:Generator_ColumnPropNameInRow="_Buyer_s_Name" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="_Buyer_s_NameColumn" msprop:Generator_UserColumnName="Buyer's Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Buyer_x0027_s_x0020_CNIC" msprop:Generator_ColumnVarNameInTable="_columnBuyer_s_CNIC" msprop:Generator_ColumnPropNameInRow="_Buyer_s_CNIC" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="_Buyer_s_CNICColumn" msprop:Generator_UserColumnName="Buyer's CNIC" type="xs:string" minOccurs="0" />
+              <xs:element name="Buyer_x0027_s_x0020_Address" msprop:Generator_ColumnVarNameInTable="_columnBuyer_s_Address" msprop:Generator_ColumnPropNameInRow="_Buyer_s_Address" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="_Buyer_s_AddressColumn" msprop:Generator_UserColumnName="Buyer's Address" type="xs:string" minOccurs="0" />
+              <xs:element name="Seller_x0027_s_x0020_Name" msprop:Generator_ColumnVarNameInTable="_columnSeller_s_Name" msprop:Generator_ColumnPropNameInRow="_Seller_s_Name" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="_Seller_s_NameColumn" msprop:Generator_UserColumnName="Seller's Name" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:GeneralSearchDataTable" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
