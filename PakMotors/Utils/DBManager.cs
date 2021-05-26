@@ -26,7 +26,7 @@ namespace PakMotors.Utils
             //"Data Source=DESKTOP-R2RQCNB\MSSQLSERVER;Initial Catalog=PakMotors;Integrated Security=True"
             //"Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;"
 
-            Connection = new SqlConnection(@"Data Source=ARISH-PC;Initial Catalog=PakMotors;Integrated Security=True");
+            Connection = new SqlConnection(@"Data Source=SANDHU;Initial Catalog=PakMotors;Integrated Security=True");
             //Connection = new SqlConnection(@"Data Source=DESKTOP-HCB17EO;Initial Catalog=PakMotors;Integrated Security=True");
         }
 

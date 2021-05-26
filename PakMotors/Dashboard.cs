@@ -17,7 +17,7 @@ namespace PakMotors
         {
             InitializeComponent();
 
-            DateTime limit = new DateTime(2021, 5, 6);
+            DateTime limit = new DateTime(2021, 7, 1);
             TimeSpan timeSpan = limit.Subtract(DateTime.Now);
             if (timeSpan.Days <= 0)
             {
